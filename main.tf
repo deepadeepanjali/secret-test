@@ -16,5 +16,5 @@ resource "azurerm_role_assignment" "secretrole" {
   # Assign the Secret Officer role to the Azure AD group for each secret
   principal_id       = var.role_definition_name 
   role_definition_name = var.role_definition_name
-  scope              = azurerm_key_vault_secret.secret.id
+  scope              = "${data.azurerm_key_vault.keyvault.id}/secrets/${data.azurerm_key_vault.secret.name}" #azurerm_key_vault_secret.secret.id
 }
