@@ -12,7 +12,7 @@ resource "azurerm_key_vault_secret" "secret" {
 }
 
 
-resource "azurerm_role_assignment" "secret_role" {
+resource "azurerm_role_assignment" "secretrole" {
   # Assign the Secret Officer role to the Azure AD group for each secret
   principal_id       = var.role_definition_name 
   role_definition_name = var.role_definition_name
