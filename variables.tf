@@ -21,7 +21,6 @@ variable "secretvalue" {
 variable "role_definition_name" {
   description = "Name of role definition for secret"
   type        = string
-  default    = NULL
 }
 
 variable "principal_id" {
